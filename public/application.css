@@ -1,0 +1,8 @@
+#copy {
+  font-size: 2rem;
+}
+
+.spaced {
+  opacity: .75;
+  letter-spacing: .1em;
+}

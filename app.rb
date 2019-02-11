@@ -8,7 +8,7 @@ configure :development do
 end
 
 get '/' do # <- Router part
-  @usernames = %w[Papillard ssaunier bernardini687 mhartl] # <- Controller part
+  @usernames = %w[Papillard ssaunier mhartl bernardini687] # <- Controller part
   erb :index # <- View is in views/index.erb
 end
 
@@ -17,5 +17,5 @@ get '/about' do
 end
 
 get '/team/:username' do
-  "The username is #{params[:username]}"
+  "The username is #{params[:username]}" # <- params is {"username"=>"testing"}
 end

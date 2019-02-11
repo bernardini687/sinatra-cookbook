@@ -2,18 +2,21 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pry-byebug'
 require 'better_errors'
+require_relative 'cookbook'
+require_relative 'recipe'
+set :bind, '0.0.0.0'
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = File.expand_path(__dir__)
 end
 
 get '/' do # <- Router part
-  @usernames = %w[Papillard ssaunier mhartl bernardini687] # <- Controller part
+  @recipes = Cookbook.new('recipes.csv').all # <- Controller part
   erb :index # <- View is in views/index.erb
 end
 
-get '/about' do
-  erb :about
+get '/new' do
+  erb :new
 end
 
 get '/team/:username' do

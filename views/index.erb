@@ -1,11 +1,16 @@
-<h1>Yo, <em>beeeatch!</em></h1>
-<p>This is <strong>dope.</strong></p>
-<p id="copy">© <%= Time.now.year %></p>
-<ul>
-  <% @usernames.each do |username| %>
+<h1>This is the list of your recipes:</h1>
+<ol>
+  <% @recipes.each do |recipe| %>
     <li>
-      <em class="spaced"><%= username %>'</em><%= "s length is #{username.size}" %>
+      <%=
+      mark = recipe.done? ? '[x]' : '[ ]'
+      gravity = recipe.gravity.nil? ? '' : " | #{recipe.gravity}"
+      preptime = recipe.preptime.nil? ? '' : " | #{recipe.preptime}"
+      "#{mark} #{recipe.name}#{gravity}#{preptime}"
+      %>
     </li>
   <% end %>
-</ul>
-<a href="/about">about</a>
+  <li>
+    <a href="/new">Add new</a>
+  </li>
+</ol>

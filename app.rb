@@ -7,6 +7,15 @@ configure :development do
   BetterErrors.application_root = File.expand_path(__dir__)
 end
 
-get '/' do                # <- Router part
-  "That's what she said!" # <- Controller part
+get '/' do # <- Router part
+  @usernames = %w[Papillard ssaunier bernardini687 mhartl]
+  erb :index # <- Controller part
+end
+
+get '/about' do
+  erb :about
+end
+
+get '/team/:username' do
+  "The username is #{params[:username]}"
 end

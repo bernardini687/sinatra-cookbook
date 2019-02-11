@@ -8,8 +8,8 @@ configure :development do
 end
 
 get '/' do # <- Router part
-  @usernames = %w[Papillard ssaunier bernardini687 mhartl]
-  erb :index # <- Controller part
+  @usernames = %w[Papillard ssaunier bernardini687 mhartl] # <- Controller part
+  erb :index # <- View is in views/index.erb
 end
 
 get '/about' do

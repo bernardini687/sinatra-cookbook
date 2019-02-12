@@ -15,6 +15,13 @@ get '/' do # <- Router part
   erb :index # <- View is in views/index.erb
 end
 
+post '/create' do
+  cookbook = Cookbook.new('recipes.csv')
+  recipe = Recipe.new(params[:name].capitalize, params[:description].capitalize)
+  cookbook.add(recipe)
+  redirect to '/'
+end
+
 get '/new' do
   erb :new
 end

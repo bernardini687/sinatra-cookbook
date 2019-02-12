@@ -8,5 +8,6 @@
 }
 
 ol {
+  list-style: none;
   font-family: monospace;
 }

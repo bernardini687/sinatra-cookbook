@@ -1,16 +1,16 @@
-<h1>This is the list of your recipes:</h1>
+<h1>CookBook Pro</h1>
 <ol>
-  <% @recipes.each do |recipe| %>
+  <% @recipes.each_with_index do |recipe, index| %>
     <li>
       <%=
       mark = recipe.done? ? '[x]' : '[ ]'
       gravity = recipe.gravity.nil? ? '' : " | #{recipe.gravity}"
       preptime = recipe.preptime.nil? ? '' : " | #{recipe.preptime}"
-      "#{mark} #{recipe.name}#{gravity}#{preptime}"
-      %>
+      "#{index + 1}. #{mark} #{recipe.name}#{gravity}#{preptime}"
+      %> [<a href="/recipes/<%= index %>">clear</a>]
     </li>
   <% end %>
   <li>
-    <a href="/new">Add new</a>
+    [<a href="/new">add new</a>]
   </li>
 </ol>

@@ -1,31 +1,39 @@
 <h1>Add a recipe</h1>
 
-<form action="/recipes" method="post">
-  <legend>Name:</legend>
-  <input type="text" name="name">
+<form action="/recipes" method="post" class='addrecipe'>
+  <div>
+    <label>Name:</label>
+    <input type="text" name="name">
+  </div>
 
-  <legend>Description:</legend>
-  <input type="text" name="blurb">
+  <div>
+    <label>Description:</label>
+    <input type="text" name="blurb">
+  </div>
 
-  <legend>Difficulty:</legend>
-  <input type="radio" name="gravity" id="option 1" value="molto bassa">
-  <label for="option 1">molto bassa</label>
-  <input type="radio" name="gravity" id="option 2" value="bassa">
-  <label for="option 2">bassa</label>
-  <input type="radio" name="gravity" id="option 3" value="media">
-  <label for="option 3">media</label>
-  <input type="radio" name="gravity" id="option 4" value="alta">
-  <label for="option 4">alta</label>
+  <div>
+    <label>Difficulty:</label>
+    <input type="radio" name="gravity" id="option 1" value="molto bassa">
+    <label for="option 1" class='option'>molto bassa</label>
+    <input type="radio" name="gravity" id="option 2" value="bassa">
+    <label for="option 2" class='option'>bassa</label>
+    <input type="radio" name="gravity" id="option 3" value="media">
+    <label for="option 3" class='option'>media</label>
+    <input type="radio" name="gravity" id="option 4" value="alta">
+    <label for="option 4" class='option'>alta</label>
+  </div>
 
-  <legend>Preparation time:</legend>
-  <input type="radio" name="preptime" id="option 1" value="5 min">
-  <label for="option 1">5 min</label>
-  <input type="radio" name="preptime" id="option 2" value="15 min">
-  <label for="option 2">15 min</label>
-  <input type="radio" name="preptime" id="option 3" value="30 min">
-  <label for="option 3">30 min</label>
-  <input type="radio" name="preptime" id="option 4" value="60 min">
-  <label for="option 4">60 min</label>
+  <div>
+    <label>Preparation time:</label>
+    <input type="radio" name="preptime" id="option 1" value="5 min">
+    <label for="option 1" class='option'>5 min</label>
+    <input type="radio" name="preptime" id="option 2" value="15 min">
+    <label for="option 2" class='option'>15 min</label>
+    <input type="radio" name="preptime" id="option 3" value="30 min">
+    <label for="option 3" class='option'>30 min</label>
+    <input type="radio" name="preptime" id="option 4" value="60 min">
+    <label for="option 4" class='option'>60 min</label>
+  </div>
 
   <div>
     <input type="submit" value='Add recipe'>

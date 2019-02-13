@@ -11,3 +11,15 @@ ol {
   list-style: none;
   font-family: monospace;
 }
+
+.addrecipe {
+  font-family: monospace;
+}
+
+.addrecipe .option {
+  font-weight: lighter;
+}
+
+.addrecipe div {
+  margin-bottom: 1rem;
+}
